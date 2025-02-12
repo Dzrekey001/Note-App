@@ -1,0 +1,13 @@
+{
+  "name": "note-app",
+  "version": "1.0.0",
+  "description": "This is a simple Notes App built with React for the frontend and Express.js for the backend. The application allows users to create, view, delete, and mark notes as important.",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "build:full":"rmdir /S /Q BackEnd\\dist && cd FrontEnd && npm run build  && mkdir ..\\BackEnd\\dist  && xcopy dist ..\\BackEnd\\dist /E /I /Y && rmdir /S /Q dist",
+    "deploy:full": "npm run build:full && git config --global core.autocrlf input && git add . && git diff --staged --quiet || (git commit -m \"Full deployment\" && git push)"
+  },
+  "author": "Dzrekey001",
+  "license": "MIT"
+}
