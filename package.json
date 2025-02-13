@@ -5,7 +5,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "build:ui":"rm -rf Backend/dist && cd Frontend && npm run build  && mkdir ../Backend/dist  && cp -r dist ../Backend/dist && rm -rf ./dist",
+    "build:ui":"rm -rf Backend/dist && cd Frontend && npm run build  && cp -r dist ../Backend/dist && rm -rf ./dist",
     "deploy:full": "npm run build:ui && git config --global core.autocrlf input && git add . && git diff --staged --quiet || (git commit -m \"Full deployment\" && git push)"
   },
   "author": "Dzrekey001",
