@@ -17,6 +17,7 @@ FEATURES
 INSTALLATION & SETUP
 --------------------------------------------------------------------------------
 1. Clone the repository:
+    
     $ git clone https://github.com/Dzrekey001/Note-App.git
     $ cd Note-App
 
