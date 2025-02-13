@@ -5,8 +5,8 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "build:full":"rmdir /S /Q BackEnd\\dist && cd FrontEnd && npm run build  && mkdir ..\\BackEnd\\dist  && xcopy dist ..\\BackEnd\\dist /E /I /Y && rmdir /S /Q dist",
-    "deploy:full": "npm run build:full && git config --global core.autocrlf input && git add . && git diff --staged --quiet || (git commit -m \"Full deployment\" && git push)"
+    "build:ui":"rm -rf BackEnd/dist && cd FrontEnd && npm run build  && mkdir ../BackEnd/dist  && cp -r dist ../BackEnd/dist && rm -rf ./dist",
+    "deploy:full": "npm run build:ui && git config --global core.autocrlf input && git add . && git diff --staged --quiet || (git commit -m \"Full deployment\" && git push)"
   },
   "author": "Dzrekey001",
   "license": "MIT"
